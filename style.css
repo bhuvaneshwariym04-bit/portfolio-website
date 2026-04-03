@@ -8,9 +8,15 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to right, #F0FFF4, #ECFDF5);
+    font-family: 'Poppins', Arial, sans-serif;
+    background: #fdfdfd;
+    color: #333;
+    overflow-x: hidden;
 }
 
 /* ======================
@@ -24,20 +30,21 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 15px 8%;
-    background: lightgray;
+    background: rgba(211, 211, 211, 0.9);
     backdrop-filter: blur(10px);
     z-index: 1000;
-    font-size: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 .logo {
-    font-size: 28px;
+    font-size: 26px;
     font-weight: bold;
-    color: rgb(10, 10, 9);
+    color: #1a1a1a;
+    transition: 0.3s;
 }
 
 .logo:hover {
-    color: blue;
+    color: #6a11cb;
     font-style: italic;
 }
 
@@ -50,14 +57,13 @@ nav ul {
 nav ul li a {
     text-decoration: none;
     font-weight: 600;
-    color: black;
+    color: #333;
     transition: 0.3s;
 }
 
 nav ul li a:hover {
-    color: blue;
+    color: #6a11cb;
     font-weight: bold;
-    font-style: italic;
 }
 
 /* ======================
@@ -65,17 +71,16 @@ nav ul li a:hover {
 ====================== */
 
 .item1 {
-    min-height: 75vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 100px;
+    padding-top: 80px;
     background: url("tech.jpeg") center/cover no-repeat;
     position: relative;
     color: white;
 }
 
-/* Dark Overlay */
 .item1::before {
     content: "";
     position: absolute;
@@ -88,22 +93,24 @@ nav ul li a:hover {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 60px;
+    gap: 50px;
     width: 85%;
     position: relative;
     z-index: 1;
 }
 
 .item1-image img {
-    width: 350px;
-    height: 350px;
+    width: 320px;
+    height: 320px;
     object-fit: cover;
     border-radius: 50%;
-    box-shadow: 0 0 25px rgba(0,255,0,0.6);
+    border: 5px solid #00ff88;
+    box-shadow: 0 0 30px rgba(0, 255, 136, 0.4);
 }
 
 .item1-content h1 {
-    font-size: 45px;
+    font-size: 50px;
+    line-height: 1.2;
 }
 
 .item1-content span {
@@ -112,26 +119,47 @@ nav ul li a:hover {
 
 .item1-content h2 {
     margin-top: 10px;
+    font-weight: 400;
+    letter-spacing: 1px;
 }
 
-/* ======================
-   SOCIAL ICONS
-====================== */
+/* SOCIAL ICONS & BUTTONS */
 
 .social-icons {
     margin-top: 25px;
 }
 
 .social-icons a {
-    font-size: 30px;
+    font-size: 28px;
     margin-right: 20px;
-    color: white;   /* ALWAYS WHITE */
+    color: white;
     transition: 0.3s;
 }
 
 .social-icons a:hover {
-    transform: scale(1.2);
     color: #00ff88;
+    transform: translateY(-5px);
+}
+
+.cv-button {
+    margin-top: 30px;
+}
+
+.download-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #6a11cb;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 15px rgba(106, 17, 203, 0.4);
+}
+
+.download-btn:hover {
+    background: #2575fc;
+    transform: scale(1.05);
 }
 
 /* ======================
@@ -139,70 +167,46 @@ nav ul li a:hover {
 ====================== */
 
 .about-section {
-    padding: 80px 8%;
-    background: url("tech.jpeg") center/cover no-repeat;
-    position: relative;
-}
-
-/* Overlay */
-.about-section::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.75);
-    z-index: 0;
+    padding: 100px 8%;
+    background: #f9f9f9;
 }
 
 .about-container {
     display: flex;
     gap: 40px;
-    position: relative;
-    z-index: 1;
+    align-items: flex-start;
 }
 
-/* Card Design */
-
-.about-left,
-.about-right {
+.about-left, .about-right {
     flex: 1;
     background: white;
     padding: 40px;
     border-radius: 20px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
     transition: 0.3s;
 }
 
-.about-left:hover,
-.about-right:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+.about-left:hover, .about-right:hover {
+    transform: translateY(-10px);
 }
 
-.about-left h1,
-.about-right h1 {
-    margin-bottom: 20px;
-    font-size: 28px;
+.about-left h1, .about-right h1 {
     color: #6a11cb;
-}
-
-.about-left h2 {
-    margin-bottom: 10px;
-    font-size: 18px;
-    color: black;
+    margin-bottom: 20px;
+    font-size: 30px;
+    border-left: 5px solid #00ff88;
+    padding-left: 15px;
 }
 
 .about-left p {
-    margin-top: 15px;
-    line-height: 1.6;
-    color: #444;
+    line-height: 1.8;
+    color: #555;
 }
 
-/* ======================
-   SKILLS
-====================== */
+/* SKILLS */
 
 .skill {
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 .skill-title {
@@ -210,21 +214,77 @@ nav ul li a:hover {
     justify-content: space-between;
     margin-bottom: 8px;
     font-weight: 600;
-    color: #333;
 }
 
 .skill-bar {
     width: 100%;
-    height: 8px;
+    height: 10px;
     background: #eee;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 
 .skill-fill {
     height: 100%;
     background: linear-gradient(to right, #6a11cb, #2575fc);
-    border-radius: 20px;
-    transition: width 1s ease-in-out;
+    border-radius: 10px;
+}
+
+/* ======================
+   PROJECTS SECTION
+====================== */
+
+.projects-section {
+    padding: 100px 8%;
+    background: #ffffff;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.project-card {
+    background: #fff;
+    padding: 35px;
+    border-radius: 15px;
+    border: 1px solid #eee;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.project-card:hover {
+    border-color: #6a11cb;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    transform: translateY(-10px);
+}
+
+.project-card i {
+    font-size: 45px;
+    color: #6a11cb;
+    margin-bottom: 20px;
+}
+
+.project-card h3 {
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.project-card p {
+    font-size: 15px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.project-card span {
+    display: inline-block;
+    background: #f0f0f0;
+    padding: 5px 12px;
+    border-radius: 5px;
+    font-size: 12px;
+    margin: 3px;
+    color: #555;
 }
 
 /* ======================
@@ -234,90 +294,47 @@ nav ul li a:hover {
 .certifications-section {
     padding: 100px 10%;
     text-align: center;
-    background: url("tech.jpeg") center/cover no-repeat;
-    position: relative;
-}
-
-/* Overlay */
-.certifications-section::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.75);
-    z-index: 0;
+    background: #f4f4f4;
 }
 
 .cert-title {
-    font-size: 22px;
-    margin-bottom: 10px;
-    color: white;
-    position: relative;
-    z-index: 1;
+    font-size: 20px;
+    color: #6a11cb;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 .cert-subtitle {
-    font-size: 36px;
+    font-size: 40px;
     margin-bottom: 50px;
-    color: yellow;
-    position: relative;
-    z-index: 1;
+}
+
+.cert-subtitle span {
+    color: #6a11cb;
 }
 
 .cert-container {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
     align-items: center;
-    position: relative;
-    z-index: 1;
 }
 
 .cert-card {
-    background: #ffffff;
-    padding: 18px 30px;
-    width: 60%;
-    border-radius: 12px;
-    box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
-    font-size: 18px;
+    background: white;
+    padding: 20px 40px;
+    width: 70%;
+    border-radius: 50px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    font-weight: 500;
     transition: 0.3s;
+    text-align: left;
 }
 
 .cert-card:hover {
-    transform: translateY(-5px);
+    background: #6a11cb;
+    color: white;
 }
-
-.cert-card a {
-    text-decoration: none;
-    color: inherit;
-    font-weight: bold;
-}
-
-.cert-card a:hover {
-    text-decoration: underline;
-}
-
-/* ======================
-   RESPONSIVE DESIGN
-====================== */
-
-@media(max-width: 768px) {
-
-    .item1-container,
-    .about-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .item1-image img {
-        width: 250px;
-        height: 250px;
-    }
-
-    .cert-card {
-        width: 90%;
-    }
-}
-
 
 /* ======================
    CONTACT SECTION
@@ -325,80 +342,40 @@ nav ul li a:hover {
 
 .contact-section {
     padding: 100px 8%;
-    background: url("tech.jpeg") center/cover no-repeat;
-    position: relative;
-    color: white; /* All text white */
-}
-
-/* Dark Overlay for readability */
-.contact-section::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.75);
-    z-index: 0;
+    background: #1a1a1a;
+    color: white;
 }
 
 .contact-container {
     display: flex;
-    justify-content: space-between;
     gap: 60px;
-    position: relative;
-    z-index: 1; /* Keep content above overlay */
 }
-
-/* LEFT SIDE */
 
 .contact-left {
     flex: 1;
 }
 
 .contact-left h2 {
+    font-size: 32px;
     margin-bottom: 30px;
-    font-size: 28px;
-    color: white;
 }
 
 .contact-info {
     display: flex;
     align-items: center;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 }
 
 .contact-info i {
-    font-size: 20px;
-    color: white;
-    margin-right: 15px;
-    border: 2px solid white;
-    padding: 10px;
-    border-radius: 50%;
+    font-size: 24px;
+    color: #00ff88;
+    margin-right: 20px;
 }
 
-.contact-info h4 {
-    margin-bottom: 5px;
-    color: white;
-}
+/* FORM */
 
-.contact-info p {
-    color: white;
-}
-
-/* RIGHT SIDE FORM */
-
-.contact-right {
+form {
     flex: 1;
-}
-
-form input,
-form textarea {
-    width: 100%;
-    padding: 15px;
-    margin-bottom: 20px;
-    border-radius: 30px;
-    border: none;
-    background: rgba(255, 255, 255, 0.9);
-    font-size: 14px;
-    outline: none;
 }
 
 .form-row {
@@ -406,53 +383,53 @@ form textarea {
     gap: 20px;
 }
 
+form input, form textarea {
+    width: 100%;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid #333;
+    background: #2a2a2a;
+    color: white;
+    outline: none;
+}
+
 form button {
     padding: 15px 40px;
+    background: #6a11cb;
+    color: white;
     border: none;
     border-radius: 30px;
-    background: purple;
-    color: white;
     font-weight: bold;
     cursor: pointer;
     transition: 0.3s;
 }
 
 form button:hover {
-    background: #a000c8;
+    background: #00ff88;
+    color: #1a1a1a;
 }
 
-/* RESPONSIVE */
+/* ======================
+   RESPONSIVE
+====================== */
 
-@media(max-width: 768px) {
-    .contact-container {
+@media (max-width: 992px) {
+    .item1-container, .about-container, .contact-container {
         flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
+    .about-left, .about-right {
+        width: 100%;
+    }
+
+    .cert-card {
+        width: 100%;
+    }
+    
     .form-row {
         flex-direction: column;
     }
-}
-
-.cv-button {
-    margin-top: 25px;
-}
-
-.download-btn {
-    display: inline-block;
-    padding: 12px 25px;
-    background: purple;
-    color: white;
-    text-decoration: none;
-    border-radius: 30px;
-    font-weight: bold;
-    transition: 0.3s ease;
-}
-
-.download-btn i {
-    margin-right: 8px;
-}
-
-.download-btn:hover {
-    background: #a000c8;
-    transform: scale(1.05);
 }
