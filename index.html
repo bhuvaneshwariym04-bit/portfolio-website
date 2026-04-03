@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anjali Kamanna | Portfolio</title>
+    <title>Bhuvaneshwari Y M | Portfolio</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
@@ -13,7 +13,7 @@
 <body>
 
 <nav>
-    <h2 class="logo">Bhuvaneshwari Y M's Portfolio</h2>
+    <h2 class="logo">Bhuvaneshwari's Portfolio</h2>
     <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
@@ -28,11 +28,11 @@
     <div class="item1-container">
 
         <div class="item1-image">
-            <img src="bhuva.jpeg" alt="Anjali Kamanna">
+            <img src="bhuva.jpeg" alt="Bhuvaneshwari Y M">
         </div>
 
         <div class="item1-content">
-            <h1>Hello, I'm <br><span>Anjali Kamanna</span></h1>
+            <h1>Hello, I'm <br><span>Bhuvaneshwari Y M</span></h1>
             <h2>A Full-Stack Web Developer</h2>
 
             <div class="social-icons">
@@ -46,7 +46,7 @@
             </div>
 
             <div class="cv-button">
-                <a href="Anjali_Kamanna_CV.pdf" download class="download-btn">
+                <a href="Bhuvaneshwari_YM_CV.pdf" download class="download-btn">
                     <i class="fas fa-download"></i> Download CV
                 </a>
             </div>
@@ -60,7 +60,7 @@
         <div class="about-left">
             <h1>About</h1>
             <h2>PERSONAL DETAILS</h2>
-            <h2>I'm Anjali Kamanna</h2>
+            <h2>I'm Bhuvaneshwari Y M</h2>
 
             <p>
                 Aspiring Full-Stack Web Developer with practical experience in building 
@@ -126,39 +126,41 @@
     </div>
 </section>
 
-<section class="projects-section" id="projects" style="padding: 60px 10%; background: #f4f4f4;">
-    <h2 class="cert-title" style="text-align: center;">Portfolio</h2>
-    <h1 class="cert-subtitle" style="text-align: center; margin-bottom: 40px;">MY <span>PROJECTS</span></h1>
+<section class="projects-section" id="projects">
+    <h2 class="cert-title">Portfolio</h2>
+    <h1 class="cert-subtitle">MY <span>PROJECTS</span></h1>
 
-    <div class="projects-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
+    <div class="projects-container">
         
-        <div class="project-card" style="background: #fff; padding: 25px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center;">
-            <i class="fas fa-seedling" style="font-size: 40px; color: #ff4a57; margin-bottom: 15px;"></i>
+        <div class="project-card">
+            <i class="fas fa-seedling"></i>
             <h3>Smart Agriculture IoT</h3>
             <p>Automated irrigation system using Arduino Uno, GSM, and Firebase for real-time monitoring.</p>
-            <div style="margin-top: 15px;">
-                <span style="background: #eee; padding: 5px 10px; border-radius: 4px; font-size: 12px;">IoT</span>
-                <span style="background: #eee; padding: 5px 10px; border-radius: 4px; font-size: 12px;">Firebase</span>
+            <div class="project-tags">
+                <span>IoT</span>
+                <span>Firebase</span>
+                <span>Arduino</span>
             </div>
         </div>
 
-        <div class="project-card" style="background: #fff; padding: 25px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center;">
-            <i class="fas fa-blind" style="font-size: 40px; color: #ff4a57; margin-bottom: 15px;"></i>
+        <div class="project-card">
+            <i class="fas fa-blind"></i>
             <h3>Smart Blind Stick</h3>
             <p>Assistive IoT device using ultrasonic sensors for obstacle detection to aid navigation.</p>
-            <div style="margin-top: 15px;">
-                <span style="background: #eee; padding: 5px 10px; border-radius: 4px; font-size: 12px;">Sensors</span>
-                <span style="background: #eee; padding: 5px 10px; border-radius: 4px; font-size: 12px;">Embedded</span>
+            <div class="project-tags">
+                <span>Sensors</span>
+                <span>Embedded</span>
             </div>
         </div>
 
-        <div class="project-card" style="background: #fff; padding: 25px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center;">
-            <i class="fas fa-laptop-code" style="font-size: 40px; color: #ff4a57; margin-bottom: 15px;"></i>
+        <div class="project-card">
+            <i class="fas fa-laptop-code"></i>
             <h3>Personal Portfolio</h3>
             <p>A high-performance portfolio site built with MERN stack principles and Netlify hosting.</p>
-            <div style="margin-top: 15px;">
-                <span style="background: #eee; padding: 5px 10px; border-radius: 4px; font-size: 12px;">React</span>
-                <span style="background: #eee; padding: 5px 10px; border-radius: 4px; font-size: 12px;">Netlify</span>
+            <div class="project-tags">
+                <span>HTML/CSS</span>
+                <span>JS</span>
+                <span>Netlify</span>
             </div>
         </div>
 
@@ -202,6 +204,7 @@
                 <input type="text" name="name" placeholder="Your Name" required>
                 <input type="email" name="email" placeholder="Your Email" required>
             </div>
+            <input type="text" name="phone" placeholder="Your Phone">
             <input type="text" name="subject" placeholder="Subject">
             <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
             <button type="submit">Send Message</button>
